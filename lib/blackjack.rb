@@ -33,8 +33,7 @@ def initial_round
   # deal two cards
   total = deal_card
   total += deal_card
-  # display then return the total
-  display_card_total(total)
+  # return the total
   total
 end
 
@@ -75,6 +74,7 @@ def runner
   # prompt 
   until total > 21
     total = hit?(total)
+    display_card_total(total)
   end
   
   end_game(total)
