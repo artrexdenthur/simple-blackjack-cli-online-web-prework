@@ -40,18 +40,19 @@ end
 
 def hit?(total)
   # code hit? here
-  loop do
+  prompt_user
+  choice = get_user_input
+  
+  case choice
+  when 'h'
+    total += deal_card
+  when 's'
+  else
+    invalid_command
     prompt_user
-    choice = get_user_input
-    case choice
-    when 'h'
-      total += deal_card
-    when 's'
-    else
-      invalid_command
-    end
-    
   end
+  
+  total
 end
 
 def invalid_command
