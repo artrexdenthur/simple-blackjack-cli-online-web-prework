@@ -34,6 +34,7 @@ def initial_round
   total = deal_card
   total += deal_card
   # return the total
+  display_card_total(total)
   total
 end
 
@@ -50,7 +51,6 @@ def hit?(total)
     invalid_command
     prompt_user
   end
-  display_card_total(total)
   total
 end
 
